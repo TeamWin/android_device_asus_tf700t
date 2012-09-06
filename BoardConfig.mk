@@ -42,7 +42,7 @@ BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE :=
 
 # EGL settings
-BOARD_EGL_CFG := device/asus/tf300t/prebuilt/egl.cfg
+BOARD_EGL_CFG := device/asus/tf700t/prebuilt/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Misc display settings
@@ -78,18 +78,44 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 29850022707
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/asus/tf300t
-TARGET_KERNEL_CONFIG := android_tf300_cm9_defconfig
+#TARGET_KERNEL_SOURCE := kernel/asus/tf700t
+#TARGET_KERNEL_CONFIG := android_tf700_cm9_defconfig
 
 # Prebuilt Kernel Fallback
-TARGET_PREBUILT_KERNEL := device/asus/tf300t/kernel
+TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
 
 # Coustom Tools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf300t/releasetools/tf300t_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/asus/tf700t/releasetools/tf300t_ota_from_target_files
 
 # Recovery Options
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf300t/recovery/recovery.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/tf700t/recovery/recovery.mk
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_INITRC := device/asus/tf300t/recovery/init.rc
+TARGET_RECOVERY_INITRC := device/asus/tf700t/recovery/init.rc
 BOARD_HAS_SDCARD_INTERNAL := true
+
+#twrp
+BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+DEVICE_RESOLUTION := 1920x1200
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_USB_STORAGE := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_NO_REBOOT_RECOVERY := true
+#TW_INCLUDE_BLOBPACK := true
+
+#TW_INCLUDE_DUMLOCK := true
+TW_INTERNAL_STORAGE_PATH := "/data/media"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
+TW_EXTERNAL_STORAGE_PATH := "/external_sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sdcard"
+#TWRP_EVENT_LOGGING := true
+
+TW_INCLUDE_CRYPTO := true
+TW_CRYPTO_FS_TYPE := "ext4"
+TW_CRYPTO_REAL_BLKDEV := "/dev/block/mmcblk0p8"
+TW_CRYPTO_MNT_POINT := "/data"
+TW_CRYPTO_FS_OPTIONS := "data=ordered,delalloc"
+TW_CRYPTO_FS_FLAGS := "0x00000406"
+TW_CRYPTO_KEY_LOC := "footer"
+TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf700t/recovery/hardwarekeyboard.cpp

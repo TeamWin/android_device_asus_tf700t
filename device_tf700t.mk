@@ -19,11 +19,11 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/asus/tf300t/tf300t-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/asus/tf300t/overlay
+DEVICE_PACKAGE_OVERLAYS += device/asus/tf700t/overlay
 
 # Prebuilt kernel location
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/asus/tf300t/kernel
+	LOCAL_KERNEL := device/asus/tf700t/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -120,8 +120,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Prime spacific overrides
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.epad.model=TF300T \
-    ro.product.model=TF300T
+    ro.epad.model=TF700T \
+    ro.product.model=TF700T
 
 # Inherit tablet dalvik settings
 $(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
@@ -134,8 +134,8 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 
 # Device nameing
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_tf300t
-PRODUCT_DEVICE := tf300t
-PRODUCT_MODEL := tf300t
+PRODUCT_NAME := full_tf700t
+PRODUCT_DEVICE := tf700t
+PRODUCT_MODEL := tf700t
 PRODUCT_BRAND := asus
 PRODUCT_MANUFACTURER := asus

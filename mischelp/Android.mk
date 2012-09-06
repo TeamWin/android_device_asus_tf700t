@@ -2,6 +2,8 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+ifneq ($(filter tf700t,$(TARGET_DEVICE)),)
+
 LOCAL_SHARED_LIBRARIES := \
     libutils
 
@@ -38,4 +40,4 @@ LOCAL_FORCE_STATIC_EXECUTABLE := true
 include $(BUILD_EXECUTABLE)
 
 
-
+endif

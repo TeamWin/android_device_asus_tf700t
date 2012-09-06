@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo full_tf300t-userdebug
+add_lunch_combo full_tf700t-eng
