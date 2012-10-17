@@ -79,7 +79,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Try to build the kernel
 #TARGET_KERNEL_SOURCE := kernel/asus/tf700t
-#TARGET_KERNEL_CONFIG := android_tf700_cm9_defconfig
+#TARGET_KERNEL_CONFIG := tf700_defconfig
 
 # Prebuilt Kernel Fallback
 TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
