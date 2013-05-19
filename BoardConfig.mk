@@ -78,8 +78,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 29850022707
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Try to build the kernel
-#TARGET_KERNEL_SOURCE := kernel/asus/tf700t
-#TARGET_KERNEL_CONFIG := tf700_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/tf700t
+TARGET_KERNEL_CONFIG := tf700_defconfig
 
 # Prebuilt Kernel Fallback
 TARGET_PREBUILT_KERNEL := device/asus/tf700t/kernel
@@ -119,3 +119,5 @@ TW_CRYPTO_FS_OPTIONS := "data=ordered,delalloc"
 TW_CRYPTO_FS_FLAGS := "0x00000406"
 TW_CRYPTO_KEY_LOC := "footer"
 TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf700t/recovery/hardwarekeyboard.cpp
+TW_BRIGHTNESS_FILE := /sys/devices/platform/pwm-backlight/backlight/pwm-backlight/brightness
+TW_MAX_BRIGHTNESS := 255

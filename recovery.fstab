@@ -3,8 +3,8 @@
 /system         ext4            /dev/block/mmcblk0p1
 /cache          ext4            /dev/block/mmcblk0p2
 /misc           emmc            /dev/block/mmcblk0p3
-/staging        ext3            /dev/block/mmcblk0p4
-/data           ext4            /dev/block/mmcblk0p8  length=-16384
+/staging        emmc            /dev/block/mmcblk0p4
+/data           ext4            /dev/block/mmcblk0p8      flags=ignoreblkid;length=-16384
 /recovery       emmc            /dev/block/mmcblk0p9
 /boot           emmc            /dev/block/mmcblk0p10
-/external_sdcard vfat           /dev/block/mmcblk1p1      /dev/block/mmcblk1
+/external_sdcard vfat           /dev/block/mmcblk1p1      /dev/block/mmcblk1   flags=display="Micro SDcard";storage;wipeingui;removable
