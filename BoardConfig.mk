@@ -77,6 +77,7 @@ WIFI_DRIVER_FW_PATH_AP      := "/system/vendor/firmware/bcm4330/fw_bcmdhd_apsta.
 WIFI_DRIVER_FW_PATH_P2P     := "/system/vendor/firmware/bcm4330/fw_bcmdhd_p2p.bin"
 
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 536870912
@@ -101,14 +102,14 @@ TARGET_RECOVERY_FSTAB := device/asus/tf700t/ramdisk/fstab.cardhu
 RECOVERY_FSTAB_VERSION := 2
 
 # SELINUX Defines
-BOARD_SEPOLICY_DIRS := \
-    device/asus/tf700t/selinux
+#BOARD_SEPOLICY_DIRS := \
+#    device/asus/tf700t/selinux
 
-BOARD_SEPOLICY_UNION := \
-    file_contexts \
-    file.te \
-    device.te \
-    domain.te
+#BOARD_SEPOLICY_UNION := \
+#    file_contexts \
+#    file.te \
+#    device.te \
+#    domain.te
 
 BOARD_HARDWARE_CLASS := device/asus/tf700t/cmhw/
 
@@ -134,5 +135,3 @@ TW_CRYPTO_KEY_LOC := "footer"
 TWRP_CUSTOM_KEYBOARD := ../../../device/asus/tf700t/recovery/hardwarekeyboard.cpp
 TW_BRIGHTNESS_FILE := /sys/devices/platform/pwm-backlight/backlight/pwm-backlight/brightness
 TW_MAX_BRIGHTNESS := 255
-TARGET_USERIMAGES_USE_F2FS := true
-
