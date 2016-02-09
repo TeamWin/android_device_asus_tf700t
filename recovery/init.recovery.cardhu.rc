@@ -1,0 +1,2 @@
+on init
+    write /sys/devices/virtual/vtconsole/vtcon1/bind 0

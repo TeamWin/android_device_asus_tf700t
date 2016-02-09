@@ -23,7 +23,8 @@ DEVICE_PACKAGE_OVERLAYS += device/asus/tf700t/overlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab \
-    $(LOCAL_PATH)/kernel:kernel
+    $(LOCAL_PATH)/kernel:kernel \
+    $(LOCAL_PATH)/recovery/init.recovery.cardhu.rc:root/init.recovery.cardhu.rc
 
 # Files needed for boot image
 PRODUCT_COPY_FILES += \
